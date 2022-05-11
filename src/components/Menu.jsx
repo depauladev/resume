@@ -65,9 +65,16 @@ const Menu = () => {
 
   return (
     <nav className="nav bd-container">
-      <a href="/" className="nav__logo">
+      <button
+        className="nav__logo"
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+          });
+        }}
+      >
         Luiz de Paula
-      </a>
+      </button>
       <div className={"nav__menu " + (open ? "show-menu" : "")}>
         <ul className="nav__list">
           {menuItens.map((item, index) => (

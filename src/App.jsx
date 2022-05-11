@@ -1,4 +1,3 @@
-import "./App.css";
 import avatar from "./assets/avatar.jpg";
 import resume from "./assets/luiz_de_paula_resume.pdf";
 import ThemeButton from "./components/ThemeButton";
