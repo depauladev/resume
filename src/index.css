@@ -342,7 +342,8 @@ h3 {
   padding-right: 1rem;
 }
 
-.experience__content:last-child .experience__line {
+.experience__content:last-child .experience__line,
+.education__content:last-child .education__line {
   display: none;
 }
 

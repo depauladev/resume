@@ -45,21 +45,25 @@ const EXPERIENCES = [
 ];
 
 const Experience = () => {
-  return EXPERIENCES.map((exp) => (
-    <div className="experience__content">
-      <div className="experience__time">
-        <span className="experience__rounder"></span>
-        <span className="experience__line"></span>
-      </div>
+  return (
+    <div className="experience__container bd-grid">
+      {EXPERIENCES.map((exp, i) => (
+        <div className="experience__content" key={i}>
+          <div className="experience__time">
+            <span className="experience__rounder"></span>
+            <span className="experience__line"></span>
+          </div>
 
-      <div className="experience__data bd-grid">
-        <h3 className="experience__title">{exp.title}</h3>
-        <span className="experience__company">{exp.company}</span>
-        <p className="experience__description">{exp.description}</p>
-        <p className="experience__description">{exp.tech}</p>
-      </div>
+          <div className="experience__data bd-grid">
+            <h3 className="experience__title">{exp.title}</h3>
+            <span className="experience__company">{exp.company}</span>
+            <p className="experience__description">{exp.description}</p>
+            <p className="experience__description">{exp.tech}</p>
+          </div>
+        </div>
+      ))}
     </div>
-  ));
+  );
 };
 
 export default Experience;
