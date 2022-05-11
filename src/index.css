@@ -40,6 +40,21 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
@@ -325,6 +340,14 @@ h3 {
 .education__time,
 .experience__time {
   padding-right: 1rem;
+}
+
+.experience__content:last-child .experience__line {
+  display: none;
+}
+
+.experience__content:nth-child(5) .experience__line {
+  height: 105%;
 }
 
 .education__rounder,

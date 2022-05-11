@@ -1,40 +1,9 @@
 import "./App.css";
 import avatar from "./assets/avatar.jpg";
-
-// const themeButton = document.getElementById("theme-button");
-// const darkTheme = "dark-theme";
-// const iconTheme = "bx-sun";
-
-// // Previously selected topic (if user selected)
-// const selectedTheme = localStorage.getItem("selected-theme");
-// const selectedIcon = localStorage.getItem("selected-icon");
-
-// // We obtain the current theme that the interface has by validating the dark-theme class
-// const getCurrentTheme = () =>
-//   document.body.classList.contains(darkTheme) ? "dark" : "light";
-// const getCurrentIcon = () =>
-//   themeButton.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
-
-// // We validate if the user previously chose a topic
-// // if (selectedTheme) {
-// //   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-// //   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-// //     darkTheme
-// //   );
-// //   themeButton.classList[selectedIcon === "bx-moon" ? "add" : "remove"](
-// //     iconTheme
-// //   );
-// // }
-
-// // Activate / deactivate the theme manually with the button
-// themeButton.addEventListener("click", () => {
-//   // Add or remove the dark / icon theme
-//   document.body.classList.toggle(darkTheme);
-//   themeButton.classList.toggle(iconTheme);
-//   // We save the theme and the current icon that the user chose
-//   localStorage.setItem("selected-theme", getCurrentTheme());
-//   localStorage.setItem("selected-icon", getCurrentIcon());
-// });
+import ThemeButton from "./components/ThemeButton";
+import ScrollTopArrow from "./components/ScrollTopArrow";
+import Experience from "./components/Experience";
+import Interest from "./components/Interest";
 
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {
@@ -121,8 +90,8 @@ function App() {
                 </a>
               </li>
               <li className="nav__item">
-                <a href="#certificates" className="nav__link">
-                  <i className="bx bx-award nav__icon"></i>Certificates
+                <a href="#languages" className="nav__link">
+                  <i className="bx bx-award nav__icon"></i>Languages
                 </a>
               </li>
             </ul>
@@ -161,18 +130,19 @@ function App() {
                     <i className="bx bx-envelope home__icon"></i>
                     depauladev@gmail.com
                   </span>
-                  <span className="home__information">
-                    <i className="bx bx-phone home__icon"></i> +55 (43)
-                    999999999
-                  </span>
+                  <a
+                    className="home__information"
+                    rel="noreferrer"
+                    href="https://api.whatsapp.com/send?phone=5543984177306&text=Oi Luiz, vamos conversar?"
+                    target="_blank"
+                  >
+                    <i className="bx bxl-whatsapp home__icon"></i>
+                    Send hi!
+                  </a>
                 </div>
               </div>
 
-              <i
-                className="bx bx-moon change-theme"
-                title="Theme"
-                id="theme-button"
-              ></i>
+              <ThemeButton />
             </section>
 
             <section className="social section">
@@ -180,19 +150,21 @@ function App() {
 
               <div className="social___container bd-grid">
                 <a
-                  href="linkedin.com/"
+                  href="https://www.linkedin.com/in/luizhpo"
+                  rel="noreferrer"
                   target="_blank"
                   className="social___link"
                 >
                   <i className="bx bxl-linkedin-square social___icon"></i>
-                  @luihpo
+                  @luizhpo
                 </a>
                 <a
-                  href="github.com/depauladev"
+                  href="https://www.github.com/depauladev"
+                  rel="noreferrer"
                   target="_blank"
                   className="social___link"
                 >
-                  <i className="bx bxl-github social___icon"></i> @luihpo
+                  <i className="bx bxl-github social___icon"></i> @depauladev
                 </a>
               </div>
             </section>
@@ -204,9 +176,14 @@ function App() {
                 I started my career in programming as a frontend developer,
                 working mainly with Javascript, then I became a fullstack
                 developer including .NET and a variability of databases in my
-                stack. All my career I have worked in agile multidisciplinary
-                teams looking for solid deliveries and up
+                stack. <br />
+                <br /> All my career I have worked in agile multidisciplinary
+                teams looking for solid deliveries and up to expectations. I
+                have proficiency building cloud-based microservices in the
+                backend, mainly in Azure and AWS, also using messaging and
+                containerization technologies.
               </p>
+              <p className="profile__description"></p>
             </section>
 
             <section className="education section" id="education">
@@ -232,7 +209,7 @@ function App() {
                   </div>
                   <div className="eduction__data bd-grid">
                     <h3 className="education__title">
-                      Analise e Desenvolvimento de Sistemas
+                      Software Analysis and Development
                     </h3>
                     <span className="education__studies">PUC - PR</span>
                     <span className="education__year">2020 - N/A</span>
@@ -247,10 +224,10 @@ function App() {
               <div className="skills__content bd-grid">
                 <ul className="skills__data">
                   <li className="skills__name">
-                    <span className="skills__circle"></span> HTML
+                    <span className="skills__circle"></span> C#
                   </li>
                   <li className="skills__name">
-                    <span className="skills__circle"></span> CSS
+                    <span className="skills__circle"></span> .Net
                   </li>
                   <li className="skills__name">
                     <span className="skills__circle"></span> Javascript
@@ -276,54 +253,11 @@ function App() {
               <h2 className="section-title">Experience</h2>
 
               <div className="experience__container bd-grid">
-                <div className="experience__content">
-                  <div className="experience__time">
-                    <span className="experience__rounder"></span>
-                    <span className="experience__line"></span>
-                  </div>
-
-                  <div className="experience__data bd-grid">
-                    <h3 className="experience__title">Software Engineer</h3>
-                    <span className="experience__company">
-                      2021 - Current | Take Blip
-                    </span>
-                    <p className="experience__description">
-                      I started my career in programming as a frontend
-                      developer, working mainly with Javascript, then I became a
-                      fullstack developer including .NET and a variability of
-                      databases in my stack.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="experience__content">
-                  <div className="experience__time">
-                    <span className="experience__rounder"></span>
-                    <span className="experience__line"></span>
-                  </div>
-
-                  <div className="experience__data bd-grid">
-                    <h3 className="experience__title">Developer</h3>
-                    <span className="experience__company">
-                      2020 - 2021 | Positivo Soluções Didaticas
-                    </span>
-                    <p className="experience__description">
-                      I started my career in programming as a frontend
-                      developer, working mainly with Javascript, then I became a
-                      fullstack developer including .NET and a variability of
-                      databases in my stack.
-                    </p>
-                  </div>
-                </div>
+                <Experience />
               </div>
             </section>
 
-            <section
-              className="certificate section"
-              id="certificates"
-            ></section>
-
-            <section className="languages section">
+            <section className="languages section" id="languages">
               <h2 className="section-title">Languages</h2>
 
               <div className="languages__container">
@@ -342,27 +276,21 @@ function App() {
               <h2 className="section-title">Interests</h2>
 
               <div className="interests__container bd-grid">
-                <div className="interests__content">
-                  <i className="bx bx-headphone interests__icon"></i>
-                  <span className="interests__name">Music</span>
-                </div>
-                <div className="interests__content">
-                  <i className="bx bx-headphone interests__icon"></i>
-                  <span className="interests__name">Music</span>
-                </div>
-                <div className="interests__content">
-                  <i className="bx bx-headphone interests__icon"></i>
-                  <span className="interests__name">Music</span>
-                </div>
+                <Interest name="Read" icon="bx-book" />
+                <Interest name="Cycling" icon="bx-cycling" />
+                <Interest name="Music" icon="bx-headphone" />
+                <Interest name="Games" icon="bx-joystick" />
+                <Interest name="Exercice" icon="bx-dumbbell" />
+                <Interest name="Animals" icon="bxs-dog" />
+                <Interest name="Beer" icon="bx-beer" />
+                <Interest name="Chess" icon="bxs-chess" />
               </div>
             </section>
           </div>
         </div>
       </main>
 
-      <a href="#" className="scrolltop" id="scroll-top">
-        <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
-      </a>
+      <ScrollTopArrow />
     </div>
   );
 }
