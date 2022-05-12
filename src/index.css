@@ -435,6 +435,12 @@ h3 {
   color: var(--text-color-light);
 }
 
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+}
+
 /* scroll top */
 .scrolltop {
   position: fixed;
@@ -503,10 +509,6 @@ h3 {
 
   .home__container {
     gap: 1.5rem;
-  }
-
-  .home__button_movil {
-    display: none;
   }
 
   .languages__content {

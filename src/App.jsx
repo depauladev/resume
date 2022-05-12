@@ -110,6 +110,7 @@ function App() {
       </main>
 
       <ScrollTopArrow />
+      <footer className="footer">{new Date().getFullYear()}</footer>
     </div>
   );
 }
