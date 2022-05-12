@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.a54be475.css",
-    "main.js": "/resume/static/js/main.6cf12aeb.js",
+    "main.css": "/resume/static/css/main.3d7edbd0.css",
+    "main.js": "/resume/static/js/main.825e6371.js",
     "static/media/avatar.jpg": "/resume/static/media/avatar.7ab3bd7334fe3dd98656.jpg",
     "static/media/luiz_de_paula_resume.pdf": "/resume/static/media/luiz_de_paula_resume.e5ae1622406747008953.pdf",
     "index.html": "/resume/index.html",
-    "main.a54be475.css.map": "/resume/static/css/main.a54be475.css.map",
-    "main.6cf12aeb.js.map": "/resume/static/js/main.6cf12aeb.js.map"
+    "main.3d7edbd0.css.map": "/resume/static/css/main.3d7edbd0.css.map",
+    "main.825e6371.js.map": "/resume/static/js/main.825e6371.js.map"
   },
   "entrypoints": [
-    "static/css/main.a54be475.css",
-    "static/js/main.6cf12aeb.js"
+    "static/css/main.3d7edbd0.css",
+    "static/js/main.825e6371.js"
   ]
 }
